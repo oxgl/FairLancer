@@ -14,7 +14,6 @@ dist
 /.bloop
 /.metadata
 /.metals
-/.github
 /RUNNING_PID
 /.settings
 /.cache-main
