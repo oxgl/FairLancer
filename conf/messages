@@ -5,7 +5,7 @@ access.denied = Access denied!
 could.not.authenticate = Could not authenticate with social provider! Please try again!
 
 home.title = Fairlancer - Home
-sign.up.title = Fairlancer - Sign Up
+sign.up.title = Fairlancer - Register company
 sign.in.title = Fairlancer - Sign In
 forgot.password.title = Fairlancer - Forgot Password
 reset.password.title = Fairlancer - Reset Password
@@ -15,26 +15,33 @@ activate.account.title = Fairlancer - Activate Account
 toggle.navigation = Toggle navigation
 welcome.signed.in = Welcome, you are now signed in!
 
-sign.up.account = Sign up for a new account
+sign.up.account = Register new company
 sign.in.credentials = Sign in with your credentials
 
 error = Error!
 info = Info!
 success = Success!
 home = Home
+company = Company
+country = Country
+company.id = Company ID
+company.name = Company name
+company.admin = Company administrator
 first.name = First name
 last.name = Last name
 full.name = Full name
-email = Email
+email = E-mail
 password = Password
 send = Send
 change = Change
 reset = Reset
-sign.up = Sign up
+sign.up = Register company
+sign.up.company = Register company
+sign.up.admin = Company administrator
 sign.in = Sign in
 sign.out = Sign out
 sign.in.now = Sign in now
-sign.up.now = Sign up now
+sign.up.now = Register company now
 already.a.member = Already a member?
 not.a.member = Not a member?
 forgot.your.password = Forgot your password?
@@ -76,9 +83,9 @@ yahoo = Yahoo
 # Emails
 ##########
 
-email.from = Fairlancer <noreply@mohiva.com>
+email.from = Fairlancer <noreply@test.com>
 
-# Sign Up
+# Register company
 email.sign.up.subject = Welcome
 email.sign.up.hello = Hello {0},
 email.sign.up.html.text = Please follow <a href="{0}">this link</a> to confirm and activate your new account.

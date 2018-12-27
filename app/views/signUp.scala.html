@@ -7,13 +7,19 @@
 
 @(signUpForm: Form[Data])(implicit request: RequestHeader, messages: Messages, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
 
+@countries = @{ Seq("" -> "Select country...", "HU" -> "Hungary", "SK"->"Slovakia") }
+
 @implicitFieldConstructor = @{ b4.vertical.fieldConstructor() }
 
 @main(messages("sign.up.title")) {
     <fieldset class="col-md-6 offset-md-3">
-        <legend>@messages("sign.up.account")</legend>
         @helper.form(action = controllers.routes.SignUpController.submit()) {
             @helper.CSRF.formField
+            <legend>@messages("sign.up.company")</legend>
+            @b4.select(signUpForm("country"),  options = countries, 'placeholder -> messages("country"))
+            @b4.text(signUpForm("companyId"), '_hiddenLabel -> messages("company.id"), 'placeholder -> messages("company.id"), 'class -> "form-control input-lg")
+            @b4.text(signUpForm("companyName"), '_hiddenLabel -> messages("company.name"), 'placeholder -> messages("company.name"), 'class -> "form-control input-lg")
+            <legend>@messages("sign.up.admin")</legend>
             @b4.text(signUpForm("firstName"), '_hiddenLabel -> messages("first.name"), 'placeholder -> messages("first.name"), 'class -> "form-control input-lg")
             @b4.text(signUpForm("lastName"), '_hiddenLabel -> messages("last.name"), 'placeholder -> messages("last.name"), 'class -> "form-control input-lg")
             @b4.text(signUpForm("email"), '_hiddenLabel -> messages("email"), 'placeholder -> messages("email"), 'class -> "form-control input-lg")

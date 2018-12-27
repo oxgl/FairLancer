@@ -13,8 +13,11 @@ object SignUpForm {
    */
   val form = Form(
     mapping(
-      "firstName" -> nonEmptyText,
-      "lastName" -> nonEmptyText,
+      "country" -> nonEmptyText,
+      "companyId" -> nonEmptyText(minLength = 6, maxLength = 20),
+      "companyName" -> nonEmptyText(maxLength = 64),
+      "firstName" -> nonEmptyText(minLength = 1, maxLength = 100),
+      "lastName" -> nonEmptyText(minLength = 1, maxLength = 100),
       "email" -> email,
       "password" -> nonEmptyText)(Data.apply)(Data.unapply))
 
@@ -27,6 +30,9 @@ object SignUpForm {
    * @param password The password of the user.
    */
   case class Data(
+    country: String,
+    companyId: String,
+    companyName: String,
     firstName: String,
     lastName: String,
     email: String,
